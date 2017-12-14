@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <head>
+    <meta charset="utf-8">
+    <title>Формы</title>
+    <style>
+      label[for="popup"]{
+        cursor:pointer;
+      }
+      input[name="popup"]{
+        display:none;
+      }
+      input[name="popup"] + div{
+       display: none;
+      }
+      input[name="popup"]:checked +div{
+       display:block;
+      }
+    </style>
+  </head>
+  <body>
+  <div class = "forma">
+    <form action="http://ya.ru/" method= "get" target="_blank">
+      <label for="login">Ваш   логин      :  </label>
+      <input required type="text" name="login" placeholder="Твой логин">
+      </br>
+      <label for="login">Ваш пароль:</label>
+      <input required type="password" name="pass" placeholder="Твой пароль">
+      </br>
+     <!-- Здесь попап -->
+      <label for="popup">Открыть попап</label>
+      <input required type="checkbox" name="popup" id="popup">
+      <div class="popup">
+        <div class="text">
+          <h1>Вы предатель государства</h1>
+          <p>Вас расстреляют</p> 
+          <label for="popup"> Сдать соседа, чтобы спастись </lable>
+        </div>
+      </div>
+    <!-- попап -->
+      </br>
+      <label >Ваш университет: </label>
+      </br>
+      <label id="itmo">ИТМО: </label>
+      <input type="radio" name="univer" id="neitmo" value='1' checked id="yes" disabled checked>
+      </br>
+      <label id="neitmo">Не университет </label>
+      <input type="radio" name="univer" value='0'>
+      </br>
+      <select name="месяц" multiple>
+        <option value="1">Январь</option>
+        <option value="2">Февраль</option>
+        <option value="3">Март</option>
+        <option value="4">Апрель</option>
+        <option value="5">Май</option>
+        <option value="6">Июнь</option>
+        <option value="7">Июль</option>
+        <option value="8">Август</option>
+        <option value="9">Сентябрь</option>
+        <option value="10">Октябрь</option>
+        <option value="11">Ноябрь</option>
+        <option value="12" selected>Декабрь</option>
+      </select>
+      </br>
+      <label id="email"> Ваша почта: </label>
+      <input maxlength = "3" requaired type="email" name="email" id="email" placeholder = "Твой">
+      </br>
+      
+      <button>Отправить на яндекс</button>
+      <input type="reset" value="сбросить">
+      <input type="submit" value="отправить№2">
+      <button> Отправить3</button>
+    </form>
+    <div>
+  </body>
+  
+  
+</body>
+</html>
+
